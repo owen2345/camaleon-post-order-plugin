@@ -1,0 +1,30 @@
+{
+  "title": "Camaleon Post Order",
+  "descr": "Permit to reorder the posts by a single dran and drop (sortable). More info: <a target='_blank' href='http://camaleon.tuzitio.com/store/plugins/post_order'>here.</a>",
+  "version": "0.1",
+  "key": "camaleon_post_order",
+  "helpers": [
+    "Plugins::CamaleonPostOrder::MainHelper"
+  ],
+  "options": [
+    {"label": "Settings", "url": "camaleon_post_order_settings_path", "eval_url": true}
+  ],
+  "hooks": {
+    "on_upgrade": [
+      "camaleon_post_order_on_upgrade"
+    ],
+    "on_active": [
+      "camaleon_post_order_on_active"
+    ],
+    "on_inactive": [
+      "camaleon_post_order_on_inactive"
+    ],
+    "list_post": [
+      "camaleon_post_order_on_list_post"
+    ],
+    "plugin_options":[
+      "camaleon_post_order_plugin_options"
+    ]
+    //here you can add all your hooks (read documentation)
+  }
+}
