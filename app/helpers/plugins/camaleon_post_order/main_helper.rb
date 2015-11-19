@@ -35,7 +35,7 @@ module Plugins::CamaleonPostOrder::MainHelper
       plugin_meta[:post_type].each do |meta|
         if meta.to_i == values[:post_type].id.to_i
           append_asset_libraries({reorder: {js: [plugin_asset_path("post_reorder.js")], css: [plugin_asset_path("reorder.css")]}})
-          content_append('<script>jQuery(function(){$.fn.reorder({url: "'+admin_plugins_camaleon_post_order_reorder_posts_path+'", table: "#posts-table-list"});});</script>')
+          cama_content_append('<script>jQuery(function(){$.fn.reorder({url: "'+admin_plugins_camaleon_post_order_reorder_posts_path+'", table: "#posts-table-list"});});</script>')
         end
       end
     end
