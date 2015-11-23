@@ -3,9 +3,9 @@ module Plugins::CamaleonPostOrder::MainHelper
     # klass.helper_method [:my_helper_method] rescue "" # here your methods accessible from views
   end
 
-  # get the plugin name with slug: 'post_reorder'
+  # get the plugin name with slug: 'camaleon_post_order'
   def get_plugin
-    plugin = current_site.plugins.find_by_slug("post_reorder")
+    plugin = current_site.plugins.find_by_slug("camaleon_post_order")
   end
 
   def camaleon_post_order_on_destroy(plugin)

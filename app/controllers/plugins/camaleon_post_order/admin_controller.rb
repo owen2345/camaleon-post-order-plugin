@@ -20,10 +20,10 @@ class Plugins::CamaleonPostOrder::AdminController < CamaleonCms::Apps::PluginsAd
 
   # This saves the settings plugin.
   def save_settings
-    @plugin = current_site.plugins.find_by_slug("post_reorder")
+    @plugin = current_plugin
     @plugin.set_meta("_reorder_objects", params[:object] || {})
     flash[:notice] = "#{t('plugin.post_reorder.updated_changes')}"
 
-    redirect_to admin_plugins_path
+    redirect_to action: :settings
   end
 end
